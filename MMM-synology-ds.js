@@ -18,10 +18,10 @@ Module.register('MMM-synology-ds', {
         
         displayColumns: {
             id: false, 
-            statuts_icon: true, 
-            statuts: false, 
+            status_icon: true, 
+            status: false, 
             title: true, 
-            size: true, 
+            size: false, 
             percent_completed: true, 
             download_icon: true, 
             speed_download: true, 
@@ -40,9 +40,8 @@ Module.register('MMM-synology-ds', {
         }, 
         
         maxItems: 5,
-        compactMode: false,
+        compactMode: true,
         compactMaxLen: 30,
-        showCompleted: false,
         textSize: 'xsmall',
         iconSize: 'small',
 
@@ -132,7 +131,7 @@ Module.register('MMM-synology-ds', {
             
             if(!this.config.compactMode){
                 // Status Icon
-                if(this.config.displayColumns.statuts_icon){
+                if(this.config.displayColumns.status_icon){
                     statusIconCell = document.createElement("td");
                     statusIconCell.className = this.config.iconSize;
                     row.appendChild(statusIconCell);
@@ -143,11 +142,11 @@ Module.register('MMM-synology-ds', {
                 }
             }
             // Status (text)
-            if(this.config.displayColumns.statuts){
-                var statutsCell = document.createElement("td");
-                statutsCell.className = "align-right " + this.config.textSize;
-                statutsCell.innerHTML = item.status;
-                row.appendChild(statutsCell);
+            if(this.config.displayColumns.status){
+                var statusCell = document.createElement("td");
+                statusCell.className = "align-right " + this.config.textSize;
+                statusCell.innerHTML = item.status;
+                row.appendChild(statusCell);
             }
             
             // Title
@@ -235,7 +234,7 @@ Module.register('MMM-synology-ds', {
             
             if(this.config.compactMode && item.additional.transfer.speed_download === 0 && item.additional.transfer.speed_upload === 0){
             // Status Icon
-                if(this.config.displayColumns.statuts_icon){
+                if(this.config.displayColumns.status_icon){
                     statusIconCell = document.createElement("td");
                     statusIconCell.className = 'align-right ' + this.config.iconSize;
                     row.appendChild(statusIconCell);
