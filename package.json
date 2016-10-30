@@ -1,0 +1,25 @@
+{
+  "name": "MMM-synology-ds",
+  "version": "0.1.0",
+  "description": "Display Synology Download Station tasks on MagicMirror.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thlb/MMM-synology-ds.git"
+  },
+  "keywords": [
+    "MagicMirror",
+    "smart mirror",
+    "synology",
+    "download satation"
+  ],
+  "author": "",
+  "contributors": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thlb/MMM-synology-ds/issues"
+  },
+  "homepage": "https://github.com/thlb/MMM-synology-ds#readme",
+  "dependencies": {
+    "synology-api": "latest"
+  }
+}

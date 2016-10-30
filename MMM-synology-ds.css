@@ -1,0 +1,9 @@
+.MMM-synology-ds table{
+    border-collapse: separate;
+    border-spacing: 10px 0;
+}
+
+.MMM-synology-ds table.compact{
+    border-collapse: separate;
+    border-spacing: 4px 0;
+}
