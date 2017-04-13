@@ -60,132 +60,20 @@ modules: [
 
 The following properties can be configured:
 
-<table width="100%">
-	<!-- why, markdown... -->
-	<thead>
-		<tr>
-			<th>Option</th>
-			<th width="100%">Description</th>
-		</tr>
-	<thead>
-	<tbody>
+| Option                       | Description
+| ---------------------------- | -----------
+| `host`                       | Synology Hostname/IP.  <br><br>**Required**<br>**Possible values:** `localhost`, `url` or a IP<br>**Default value:** `null`
+| `port`                       | Synology port.  <br><br><br>**Default value:** ` 5000 ` (Default Synology port)
+| `login`                      | Synology account.  <br><br>**Required**<br>**Default value:** `null`
+| `passwd`                     | Account password.  <br><br>**Required**<br>**Default value:** `null`
+| `refreshInterval`            | The refresh interval (in seconds).<br><br>**Default value:** `10`
+| `maxItems`                   | Maxium number displayed tasks<br><br>**Possible values:** `numeric`<br>**Default value:** `5`
+| `compactMode`                | The size of module is reduced. Number of caracters of the task name is limited by `compactMaxLen`<br>**Recommended for:** `top_left`, `top_right`, ` bottom_left`, ` bottom_right`, ` bottom_center`, `middle_center`<br>**Possible values:** `true` or `false`<br>**Default value:** `true`
+| `compactMaxLen`              | Maximum number of caracters of the task name<br><br>**Possible values:** `numeric`<br>**Default value:** `30`
+| `textSize`                   | <br><br>**Possible values:** `xsmall`, `small`, `medium`, `large`, `xlarge`<br>**Default value:** `xsmall`
+| `iconSize`                   | Size of FontAwesome icons<br><br>**Possible values:** `xsmall`, `small`, `medium`, `large`, `xlarge`<br>**Default value:** `small`
+| `msgEmptyList`	           | Display message when no tasks on Download Station<br><br>**Possible values:** Any string you want!<br>**Default value:** `No task`
 
-		<tr>
-			<td><code>host</code></td>
-			<td>Synology Hostname/IP.  
-				<br>
-				<br>
-				<b>Required</b>
-				<br>
-				<b>Possible values:</b> <code>localhost</code>, <code>url</code> or a IP
-				<br>
-				<b>Default value:</b> <code>null</code>
-			</td>
-		</tr>
-		
-		<tr>
-			<td><code>port</code></td>
-			<td>Synology port.  
-				<br>
-				<br>
-				<br>
-				<b>Default value:</b> <code> 5000 </code> (Default Synology port)
-			</td>
-		</tr>
-		<tr>
-			<td><code>login</code></td>
-			<td>Synology account.  
-				<br>
-				<br>
-				<b>Required</b>
-				<br>
-				<b>Default value:</b> <code>null</code>
-			</td>
-		</tr>
-
-		<tr>
-			<td><code>passwd</code></td>
-			<td>Account password.  
-				<br>
-				<br>
-				<b>Required</b>
-				<br>
-				<b>Default value:</b> <code>null</code>
-			</td>
-		</tr>
-   		<tr>
-			<td><code>refreshInterval</code></td>
-			<td>The refresh interval (in seconds).
-				<br>
-				<br>
-				<b>Default value:</b> <code>10</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>maxItems</code></td>
-			<td>Maxium number displayed tasks
-				<br>
-				<br>
-				<b>Possible values:</b> <code>numeric</code>
-				<br>
-				<b>Default value:</b> <code>5</code>
-			</td>
-		</tr>
-    	<tr>
-			<td><code>compactMode</code></td>
-			<td>The size of module is reduced. Number of caracters of the task name is limited by <code>compactMaxLen</code>
-				<br>
-				<b>Recommended for:</b> <code>top_left</code>, <code>top_right</code>, <code> bottom_left</code>, <code> bottom_right</code>, <code> bottom_center</code>, <code>middle_center</code>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>compactMaxLen</code></td>
-			<td>Maximum number of caracters of the task name
-				<br>
-				<br>
-				<b>Possible values:</b> <code>numeric</code>
-				<br>
-				<b>Default value:</b> <code>30</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>textSize</code></td>
-			<td>
-				<br>
-				<br>
-				<b>Possible values:</b> <code>xsmall</code>, <code>small</code>, <code>medium</code>, <code>large</code>, <code>xlarge</code>
-				<br>
-				<b>Default value:</b> <code>xsmall</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>iconSize</code></td>
-			<td>Size of FontAwesome icons
-				<br>
-				<br>
-				<b>Possible values:</b> <code>xsmall</code>, <code>small</code>, <code>medium</code>, <code>large</code>, <code>xlarge</code>
-				<br>
-				<b>Default value:</b> <code>small</code>
-			</td>
-		</tr>
-		
-		<tr>
-			<td><code>msgEmptyList</code></td>
-			<td>Display message when no tasks on Download Station
-				<br>
-				<br>
-				<b>Possible values:</b> Any string you want!
-				<br>
-				<b>Default value:</b> <code>No task</code>
-			</td>
-		</tr>
-
-	</tbody>
-</table>
 
 
 Additional settings are available to :
@@ -196,119 +84,19 @@ Additional settings are available to :
 ## Additional configuration : Display / hide columns
 
 The <code>displayColumns</code> property contains the list of each column you can display/hide
+| Option                       | Description
+| ---------------------------- | -----------
+| `id`                         | Display task ID (used for debug)<br><br>**Possible values:** `true` or `false`<br>**Default value:** `false`
+| `status_icon`                | Display task status (FontAwesome icon)<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
+| `status`                     | Display task status (text)<br><br>**Possible values:** `true` or `false`<br>**Default value:** `false`
+| `title`                      | Display task title<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
+| `size`                       | Display size of download task<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
+| `percent_completed`          | Display percentage download completed<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
+| `download_icon`              | Display download speed icon<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
+| `speed_download`             | Display download speed value<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
+| `upload_icon`                | Display upload speed icon<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
+| `speed_upload`               | Display upload speed value<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
 
-<table width="100%">
-	<!-- why, markdown... -->
-	<thead>
-		<tr>
-			<th>Option</th>
-			<th width="100%">Description</th>
-		</tr>
-	<thead>
-	<tbody>
-
-    	<tr>
-			<td><code>id</code></td>
-			<td>Display task ID (used for debug)
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>false</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>status_icon</code></td>
-			<td>Display task status (FontAwesome icon)
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>status</code></td>
-			<td>Display task status (text)
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>false</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>title</code></td>
-			<td>Display task title
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>size</code></td>
-			<td>Display size of download task
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>percent_completed</code></td>
-			<td>Display percentage download completed
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>download_icon</code></td>
-			<td>Display download speed icon
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>speed_download</code></td>
-			<td>Display download speed value
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>upload_icon</code></td>
-			<td>Display upload speed icon
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>speed_upload</code></td>
-			<td>Display upload speed value
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-	</tbody>
-</table>
 
 ### Example :
 
@@ -359,88 +147,16 @@ Priority :
 	6. Paused
 	7. Seeding (Task discarded if no upload in progress)
 
-<table width="100%">
-	<!-- why, markdown... -->
-	<thead>
-		<tr>
-			<th>Option</th>
-			<th width="100%">Description</th>
-		</tr>
-	<thead>
-	<tbody>
+| Option                       | Description
+| ---------------------------- | -----------
+| `finished`                   | Finished task (download completed, but not seeding)<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
+| `downloading`                | Download in progress Task<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
+| `waiting`                    | Waiting task (Download will start shortly)<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
+| `hash_checking`              | Checking current task integrity<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
+| `paused`                     | Paused task<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
+| `seeding`                    | Download completed, sharing.<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
+| `error`                      | Error task<br><br>**Possible values:** `true` or `false`<br>**Default value:** `true`
 
-    	<tr>
-			<td><code>finished</code></td>
-			<td>Finished task (download completed, but not seeding)
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>downloading</code></td>
-			<td>Download in progress Task
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>waiting</code></td>
-			<td>Waiting task (Download will start shortly)
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>hash_checking</code></td>
-			<td>Checking current task integrity
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>paused</code></td>
-			<td>Paused task
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>seeding</code></td>
-			<td>Download completed, sharing.				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		<tr>
-			<td><code>error</code></td>
-			<td>Error task
-				<br>
-				<br>
-				<b>Possible values:</b> <code>true</code> or <code>false</code>
-				<br>
-				<b>Default value:</b> <code>true</code>
-			</td>
-		</tr>
-		
-	</tbody>
-</table>
 
 ### Example :
 
