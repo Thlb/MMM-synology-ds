@@ -84,6 +84,7 @@ Additional settings are available to :
 ## Additional configuration : Display / hide columns
 
 The <code>displayColumns</code> property contains the list of each column you can display/hide
+
 | Option                       | Description
 | ---------------------------- | -----------
 | `id`                         | Display task ID (used for debug)<br><br>**Possible values:** `true` or `false`<br>**Default value:** `false`
