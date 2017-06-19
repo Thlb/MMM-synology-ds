@@ -47,7 +47,7 @@ modules: [
     config: {
       host: 'my.synology-ds.com',
       port: '5000', // Server port (not required if default port (5000) is used)
-      login: 'account',
+      user: 'account',
       passwd: 'password',
       refreshInterval: 10, // in seconds
       compactMode: true, // recommanded in left or right position.
@@ -64,7 +64,7 @@ The following properties can be configured:
 | ---------------------------- | -----------
 | `host`                       | Synology Hostname/IP.  <br><br>**Required**<br>**Possible values:** `localhost`, `url` or a IP<br>**Default value:** `null`
 | `port`                       | Synology port.  <br><br><br>**Default value:** ` 5000 ` (Default Synology port)
-| `login`                      | Synology account.  <br><br>**Required**<br>**Default value:** `null`
+| `user`                       | Synology account.  <br><br>**Required**<br>**Default value:** `null`
 | `passwd`                     | Account password.  <br><br>**Required**<br>**Default value:** `null`
 | `refreshInterval`            | The refresh interval (in seconds).<br><br>**Default value:** `10`
 | `maxItems`                   | Maxium number displayed tasks<br><br>**Possible values:** `numeric`<br>**Default value:** `5`
